@@ -14,9 +14,9 @@
 <p>
     The <code>client/</code> folder is where you are going to be developing your code files.
 </p>
-<p>
-    Check out <code>index.html</code> inside the <code>client/</code> folder to get started!
-</p>
+<!--<p>-->
+<!--    Check out <code>index.html</code> inside the <code>client/</code> folder to get started!-->
+<!--</p>-->
 <!--<img id="dancing-bear" src="img/happybear.gif" alt="Happy Dancing Bear">-->
 <!--<div class="content">-->
 <!--    <h4>Files inside this page...</h4>-->
@@ -40,13 +40,26 @@
 <!--</div>-->
 <script src="/js/client.js"></script>
 
-
+<h4>Browser logs</h4>
 <div class="chromeLog">
     <script>
-        console.log(document.write(Object.getOwnPropertyNames(window)));
+        document.write(Object.getOwnPropertyNames(window));
+
+<!--native to window-->
+
     </script>
 </div>
+<div>
+    <br>
+    <br>
+</div>
+<h4>Global logs</h4>
+<div class="globalLog">
+    <script>
+        document.write(Object.keys( window ));
 
 
+    </script>
+</div>
 </body>
 </html>
