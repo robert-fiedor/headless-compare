@@ -8,23 +8,21 @@ import java.util.Set;
 
 public class CompareTheLogsFindDifference {
 
-//    static String file1 = "chrome-getGlobalLogs.txt";
-//    static String file2 = "chrome-headless-getGlobalLogs.txt";
-
-    static String file1 = "manual-chrome-getGlobalLogs.txt";
-    static String file2 = "manual-chrome-getOwnPropertyLogs.txt";
-
-//    static String file1 = "chrome-getOwnPropertyLogs.txt";
-//    static String file2 = "chrome-headless-getOwnPropertyLogs.txt";
+    static String file1 = "chrome-getGlobalLogs.txt";
+    static String file2 = "chrome-getOwnPropertyLogs.txt";
+    static String file3 = "chrome-headless-getGlobalLogs.txt";
+    static String file4 = "chrome-headless-getOwnPropertyLogs.txt";
+    static String file5 = "manual-getOwnPropertyLogs.txt";
+    static String file6 = "manual-getGlobalLogs.txt";
 
     public static void main(String[] args) throws IOException {
 
-        File file1Logs = new File(file1);
+        File file1Logs = new File(file3);
         BufferedReader file1LogsBuffered = new BufferedReader(new FileReader(file1Logs));
 
         String[] file1LogsInArray = file1LogsBuffered.readLine().split(",");
 
-        File file2Logs = new File(file2);
+        File file2Logs = new File(file6);
         BufferedReader file2LogsBuffered = new BufferedReader(new FileReader(file2Logs));
 
         String[] file2LogsInArray = file2LogsBuffered.readLine().split(",");
@@ -45,6 +43,8 @@ public class CompareTheLogsFindDifference {
 
         System.out.println("Unique SetOfFile2Logs = " + setOfFile2Logs);
         System.out.println("Unique SetOfFile1Logs = " + setOfFile1Logs);
+        System.out.println("setOfFile1Logs.size() = " + setOfFile1Logs.size());
+        System.out.println("setOfFile2Logs.size() = " + setOfFile2Logs.size());
 
     }
 }
